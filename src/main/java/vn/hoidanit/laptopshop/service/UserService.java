@@ -1,9 +1,7 @@
 package vn.hoidanit.laptopshop.service;
 
 import java.util.List;
-
 import org.springframework.stereotype.Service;
-
 import vn.hoidanit.laptopshop.domain.User;
 import vn.hoidanit.laptopshop.repository.UserRepository;
 
@@ -32,4 +30,9 @@ public class UserService {
         System.out.println(eric);
         return this.userRepository.save(user);
     }
+
+    public User getUserByID(long id) {
+        return this.userRepository.findById(id);
+    }
+
 }
